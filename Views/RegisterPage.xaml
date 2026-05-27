@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="PetsGo.Views.RegisterPage"
+    Title="Registro"
+    BackgroundColor="#0F0F0F">
+
+    <ScrollView>
+
+        <VerticalStackLayout
+            Padding="30"
+            Spacing="15">
+
+            <Label
+                Text="Crear Cuenta"
+                FontSize="34"
+                FontAttributes="Bold"
+                TextColor="White"
+                HorizontalOptions="Center" />
+
+            <Entry
+                x:Name="NameEntry"
+                Placeholder="Nombre"
+                BackgroundColor="#1E1E1E"
+                TextColor="White"
+                PlaceholderColor="#888888" />
+
+            <Entry
+                x:Name="RutEntry"
+                Placeholder="RUT"
+                Keyboard="Numeric"
+                BackgroundColor="#1E1E1E"
+                TextColor="White"
+                PlaceholderColor="#888888" />
+
+            <Entry
+                x:Name="PhoneEntry"
+                Placeholder="Teléfono"
+                Keyboard="Telephone"
+                BackgroundColor="#1E1E1E"
+                TextColor="White"
+                PlaceholderColor="#888888" />
+
+            <Entry
+                x:Name="EmailEntry"
+                Placeholder="Correo"
+                Keyboard="Email"
+                BackgroundColor="#1E1E1E"
+                TextColor="White"
+                PlaceholderColor="#888888" />
+
+            <Entry
+                x:Name="PasswordEntry"
+                Placeholder="Contraseña"
+                IsPassword="True"
+                BackgroundColor="#1E1E1E"
+                TextColor="White"
+                PlaceholderColor="#888888" />
+
+            <Picker
+                x:Name="RolePicker"
+                Title="Seleccionar Rol"
+                BackgroundColor="#1E1E1E"
+                TextColor="White">
+
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Client</x:String>
+                        <x:String>Walker</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+
+            </Picker>
+
+            <Button
+                Text="Registrarse"
+                Clicked="OnRegisterClicked"
+                BackgroundColor="#4CAF50"
+                TextColor="White"
+                CornerRadius="16"
+                HeightRequest="55" />
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>

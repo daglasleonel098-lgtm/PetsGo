@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="PetsGo.Views.Walker.WalkerProfilePage"
+    BackgroundColor="#121212"
+    Title="Perfil">
+
+    <ScrollView>
+
+        <VerticalStackLayout
+            Padding="20"
+            Spacing="15">
+
+            <Frame
+                CornerRadius="80"
+                HeightRequest="140"
+                WidthRequest="140"
+                HorizontalOptions="Center"
+                BackgroundColor="#2A2A2A">
+
+                <Image
+                    x:Name="ProfileImage"
+                    Aspect="AspectFill"/>
+            </Frame>
+
+            <Button
+                Text="Cambiar foto"
+                Clicked="OnChangePhoto"/>
+
+            <Button
+                Text="Eliminar foto"
+                Clicked="OnDeletePhoto"/>
+
+            <Entry
+                x:Name="NameEntry"
+                Placeholder="Nombre"/>
+
+            <Editor
+                x:Name="DescriptionEditor"
+                HeightRequest="120"
+                Placeholder="Descripción"/>
+
+            <Editor
+                x:Name="ScheduleEditor"
+                HeightRequest="120"
+                Placeholder="Horario de trabajo"/>
+
+            <Button
+                Text="Guardar Perfil"
+                Clicked="OnSaveProfile"/>
+
+            <Button
+                Text="Actualizar ubicación"
+                Clicked="OnUpdateLocation"/>
+
+            <Button
+                Text="Cambiar a Cliente"
+                Clicked="OnSwitchRole"/>
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>

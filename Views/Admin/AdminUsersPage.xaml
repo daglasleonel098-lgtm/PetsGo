@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="PetsGo.Views.Admin.AdminUsersPage"
+    Title="Usuarios"
+    BackgroundColor="#121212">
+
+    <ScrollView>
+
+        <VerticalStackLayout
+            Padding="20"
+            Spacing="15">
+
+            <Label
+                Text="Usuarios Registrados"
+                FontSize="28"
+                FontAttributes="Bold"
+                TextColor="White" />
+
+            <CollectionView
+                x:Name="UsersList">
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+
+                        <Frame
+                            BackgroundColor="#1E1E1E"
+                            BorderColor="#2E7D32"
+                            CornerRadius="18"
+                            Padding="15"
+                            Margin="0,0,0,12">
+
+                            <VerticalStackLayout>
+
+                                <Label
+                                    Text="{Binding Name}"
+                                    TextColor="White"
+                                    FontAttributes="Bold"
+                                    FontSize="18" />
+
+                                <Label
+                                    Text="{Binding Role}"
+                                    TextColor="#BBBBBB" />
+
+                                <Label
+                                    Text="{Binding Email}"
+                                    TextColor="#BBBBBB" />
+
+                            </VerticalStackLayout>
+
+                        </Frame>
+
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>

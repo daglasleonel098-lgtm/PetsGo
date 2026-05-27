@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="PetsGo.Views.Shared.ChatPage"
+    Title="Chat"
+    BackgroundColor="#121212">
+
+    <Grid RowDefinitions="*,Auto">
+
+        <!-- MENSAJES -->
+
+        <CollectionView
+            x:Name="MessagesList"
+            Margin="15">
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+
+                    <Frame
+                        BackgroundColor="#1E1E1E"
+                        BorderColor="#2E7D32"
+                        CornerRadius="14"
+                        Padding="12"
+                        Margin="0,0,0,12">
+
+                        <VerticalStackLayout>
+
+                            <Label
+                                Text="{Binding User}"
+                                TextColor="#4CAF50"
+                                FontAttributes="Bold" />
+
+                            <Label
+                                Text="{Binding Message}"
+                                TextColor="White" />
+
+                        </VerticalStackLayout>
+
+                    </Frame>
+
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+
+        <!-- INPUT -->
+
+        <Grid
+            Grid.Row="1"
+            Padding="10"
+            ColumnDefinitions="*,Auto">
+
+            <Entry
+                x:Name="MessageEntry"
+                Placeholder="Escribe un mensaje..."
+                BackgroundColor="#1E1E1E"
+                TextColor="White"
+                PlaceholderColor="Gray" />
+
+            <Button
+                Grid.Column="1"
+                Text="Enviar"
+                Clicked="OnSendClicked"
+                BackgroundColor="#4CAF50"
+                TextColor="White"
+                Margin="10,0,0,0" />
+
+        </Grid>
+
+    </Grid>
+
+</ContentPage>

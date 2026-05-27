@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="PetsGo.Views.Client.ClientRequestsPage"
+    Title="Solicitudes"
+    BackgroundColor="#121212">
+
+    <ScrollView>
+
+        <VerticalStackLayout
+            Padding="20"
+            Spacing="15">
+
+            <Label
+                Text="Tus Solicitudes"
+                FontSize="28"
+                FontAttributes="Bold"
+                TextColor="White" />
+
+            <Frame
+                BackgroundColor="#1E1E1E"
+                BorderColor="#2E7D32"
+                CornerRadius="18">
+
+                <VerticalStackLayout>
+
+                    <Label
+                        Text="Paseo solicitado"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        FontSize="18" />
+
+                    <Label
+                        Text="Estado: Pendiente"
+                        TextColor="#FFD54F" />
+
+                </VerticalStackLayout>
+
+            </Frame>
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>

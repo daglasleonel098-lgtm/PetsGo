@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="PetsGo.Views.LoginPage"
+    Title="Login"
+    BackgroundColor="#0F0F0F">
+
+    <ScrollView>
+
+        <VerticalStackLayout
+            Padding="30"
+            Spacing="18"
+            VerticalOptions="Center">
+
+            <Label
+                Text="PetsGo"
+                FontSize="40"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                TextColor="White" />
+
+            <Label
+                Text="Iniciar sesión"
+                FontSize="20"
+                HorizontalOptions="Center"
+                TextColor="#BDBDBD" />
+
+            <Entry
+                x:Name="RutEntry"
+                Placeholder="RUT"
+                Keyboard="Numeric"
+                BackgroundColor="#1E1E1E"
+                TextColor="White"
+                PlaceholderColor="#888888" />
+
+            <Entry
+                x:Name="PasswordEntry"
+                Placeholder="Contraseña"
+                IsPassword="True"
+                BackgroundColor="#1E1E1E"
+                TextColor="White"
+                PlaceholderColor="#888888" />
+
+            <Button
+                Text="Ingresar"
+                Clicked="OnLoginClicked"
+                BackgroundColor="#4CAF50"
+                TextColor="White"
+                CornerRadius="16"
+                HeightRequest="55" />
+
+            <Label
+                Text="Crear cuenta"
+                HorizontalOptions="Center"
+                TextColor="#4CAF50">
+
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer
+                        Tapped="OnRegisterTapped" />
+                </Label.GestureRecognizers>
+
+            </Label>
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>
